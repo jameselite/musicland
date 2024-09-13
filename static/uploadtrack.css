@@ -1,0 +1,205 @@
+@font-face {
+    font-family: roberto;
+    src: url(Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: roberto2;
+    src: url(Roboto-Thin.ttf);
+}
+#container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar{
+
+    width: 150px;
+    height: 100vw;
+    background-color: #845ec2;
+    position : fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 8px 8px 15px rgb(0, 0, 0);
+}
+#musicland{
+
+    position: fixed;
+    left: 14px;
+    top: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    font-family: roberto;
+}
+body{
+
+    background-color: rgb(35, 35, 35);
+}
+#register{
+
+    position: fixed;
+    left: 30px;
+    top: 585px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#login{
+
+    position: fixed;
+    left: 30px;
+    top: 540px;
+    font-family: roberto;
+    font-size: 20px;
+}
+.link{
+
+    color: black;
+    text-decoration: none;
+}
+.link:hover{
+
+    color: white;
+    text-decoration: none;
+}
+#dashboard{
+
+    position: fixed;
+    left: 30px;
+    top: 170px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#playlist{
+
+    position: fixed;
+    left: 30px;
+    top: 250px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#logout{
+
+    position: fixed;
+    left: 30px;
+    top: 560px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#homepage{
+
+    position: fixed;
+    left: 30px;
+    top: 90px;
+    font-family: roberto;
+    font-size: 20px;
+}
+.titleform{
+
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    width: 300px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: roberto;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+}
+.descriptionform{
+
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    width: 300px;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    font-family: roberto;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding-bottom: 180px;
+    outline: none;
+
+}
+.descriptionform::placeholder{
+
+    position: absolute;
+    top: 1%;
+}
+#uploadtext{
+
+    position: absolute;
+    font-family: roberto;
+    color: white;
+    left: 43%;
+}
+.trackfileform{
+
+    position: absolute;
+    left: 40%;
+    top: 70%;
+    color: white;
+    font-family: roberto;
+}
+.trackfileform::file-selector-button{
+
+    
+    background-color: #845ec2;
+    border: none;
+    width: 100px;
+    height: 20px;
+    border-radius: 15px;
+    font-family: roberto;
+}
+.imageform{
+
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    color: white;
+    font-family: roberto;
+}
+.imageform::file-selector-button{
+
+    
+    background-color: #845ec2;
+    border: none;
+    width: 100px;
+    height: 20px;
+    border-radius: 15px;
+    font-family: roberto;
+}
+#labelfortrack{
+
+    position: absolute;
+    top: 65%;
+    left: 33%;
+    color: white;
+    font-family: roberto;
+    font-size: 20px;
+}
+#labelforimage{
+
+    position: absolute;
+    top: 75%;
+    left: 33%;
+    color: white;
+    font-family: roberto;
+    font-size: 20px;
+}
+#upload{
+
+    position: absolute;
+    left: 47.4%;
+    top: 90%;
+    width: 100px;
+    height: 30px;
+    background-color: #845ec2;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    font-family: roberto;
+    font-size: 15px;
+}

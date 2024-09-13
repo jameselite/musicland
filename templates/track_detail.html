@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{track.title}}{% endblock title %}</title>
+    {% block style %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'track_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% endblock style %}
+</head>
+<body>
+    {% block links %}
+    {% if request.user.is_authenticated %}
+       <a href="{% url 'index' %}" class="link"><h2 id="homepage">Home</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       <a href="{% url 'uploadtrack' %}" class="link"><h2 id="uploadlink">Upload</h2></a>
+       <a href="{% url 'accounts:logout' %}" class="link"><h2 id="logout">logout</h2></a>
+
+       {% else %}
+
+       <a href="{% url 'accounts:login' %}" class="link"><h2 id="login">Login</h2></a>
+       <a href="{% url 'accounts:register' %}" class="link"><h2 id="register">Register</h2></a>
+       <a href="{% url 'index' %}" class="link"><h2 id="homepage">Home</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'uploadtrack'}" class="link"><h2 id="uploadlink">Upload</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       {% endif %}
+    {% endblock links %}
+    {% block content %}
+
+        <h1 id="tracktitle">{{track.title}}</h1>
+      <audio controls id="audio">
+        <source src="{{ track.track.url }}" type="audio/mpeg">
+      </audio>
+      <img src="{{ track.image.url }}" id="trackimg">
+      <h3 id="author">Uploader : {{ track.author }}</h3>
+      <h3 id="description">{{ track.description }}</h3>
+      {% if request.user.is_authenticated and track not in tracks_in_playlist %}
+      <form action="{% url 'add_to_playlist' track.pk %}" method="post">{% csrf_token %}
+         <button type="submit" id="addtoplaylist">Add To Playlist</button>
+      </form>
+      {% elif request.user.is_authenticated and track in tracks_in_playlist %}
+      <form action="{% url 'remove_from_playlist' track.pk %}" method="post">{% csrf_token %}
+         <button type="submit" id="remove_from_playlist">Remove From Playlist</button>
+      </form>
+      {% else %}
+
+
+      {% endif %}
+      {% if request.user == track.author %}
+      <form method="post" action="{% url 'deletetrack' pk=track.pk %}">{% csrf_token %}
+
+         <button type="submit" id="delete">Delete</button>
+
+      </form>
+      <a href="{% url 'trackupdate' pk=track.pk %}"><button id="edit">Edit</button></a>
+      {% endif %}
+    
+
+     <form action="{% url 'liketrack' track.id %}" method="post">{% csrf_token %}
+
+         <button type="submit" id="like"></button>
+
+     </form>
+
+
+ 
+    
+    <h3 id="createdat">Uploaded in : {{ track.created_at }}</h3>
+    <h4 id="likeamount">{{ track.like_set.count }}</h4>
+    <h1 id="comments">Comments : {{ comments_count }}</h1>
+    {% for comment in comments %}
+
+    <div id="commentobject">
+        <h1 id="commentauthor">{{comment.author}}</h1>
+        <h3 id="commenttext">{{comment.text}}</h3>
+        <h4 id="commenttime">{{comment.created_at}}</h4>
+        <hr id="hr">
+    </div>
+
+    {% empty %}
+
+    <h2 id="nocomments">No Comments yet.</h2>
+
+    {% endfor %}
+
+    <h1 id="commentlabelform">Add a comment</h1>
+
+    <form method="post">{% csrf_token %}
+
+        {{ form.text }}
+        <button type="submit" id="commentbutton">Add</button>
+
+    </form>
+{% endblock content %}
+</body>
+</html>

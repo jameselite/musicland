@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if searched %}
+        <h3>Search result for: {{ searched }}</h3>
+    {% endif %}
+
+    {% for result_item in item %}
+
+    <h1>{{ result_item }}</h1>
+
+    {% endfor %}
+</body>
+</html>

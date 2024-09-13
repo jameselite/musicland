@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <br>
+    <br>
+    {{ form.title }}
+    <br>
+    <br>
+    {{form.description}}
+    <br>
+    <br>
+    {{form.track}}
+    <br>
+    <br>
+    <button type="submit">Edit</button>
+</form>
+</body>
+</html>

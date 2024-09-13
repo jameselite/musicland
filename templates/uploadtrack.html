@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        Upload Music
+        {% endblock title %}
+    </title>
+    {% block style %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'uploadtrack.css' %}">
+    {% endblock style %}
+</head>
+<body>
+    
+    
+    {% block links %}
+    {% if request.user.is_authenticated %}
+       <a href="{% url 'index' %}" class="link"><h2 id="homepage">Home</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       <a href="{% url 'accounts:logout' %}" class="link"><h2 id="logout">logout</h2></a>
+       {% else %}
+       <a href="{% url 'accounts:login' %}" class="link"><h2 id="login">Login</h2></a>
+       <a href="{% url 'accounts:register' %}" class="link"><h2 id="register">Register</h2></a>
+       <a href="{% url 'index' %}" class="link"><h2 id="homepage">Home</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       {% endif %}
+    {% endblock links %}
+
+    {% block content %}
+    <h1 id="uploadtext">Upload a Track</h1>
+    <h4 id="labelfortrack">Track :</h4>
+    <h4 id="labelforimage">Image :</h4>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+        {{forms.title}}
+        {{forms.description}}
+        {{forms.track}}
+        {{forms.image}}
+        <button type="submit" id="upload">Upload</button>
+    </form>
+    {% endblock content %}
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+@font-face {
+    font-family: roberto;
+    src: url(Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: roberto2;
+    src: url(Roboto-Thin.ttf);
+}
+#uploadlink{
+
+    position: fixed;
+    left: 30px;
+    top: 170px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#mydashboard{
+
+    position: absolute;
+    left: 17%;
+    top: 6%;
+    font-family: roberto;
+    color: white;
+}
+#tracktitle{
+
+    margin-left: 225px;
+    margin-top: 25px;
+    color: #06d3a3;
+    font-family: roberto2;
+    font-size: 20px;
+    position: relative;
+    top: 130px;
+
+}
+#tracktitle:hover{
+
+    color: white;
+    font-family: roberto2;
+
+}
+.linkstyle{
+
+    text-decoration: none;
+    color: black;
+}
+#timeofsong{
+
+    margin-left: 265px;
+    margin-top: 25px;
+    color: #ffffff;
+    font-family: roberto2;
+    font-size: 20px;
+    position: relative;
+    top: 130px;
+}
+#nothing{
+
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    color: chartreuse;
+    font-family: roberto2;
+}

@@ -1,0 +1,95 @@
+@font-face {
+    font-family: roberto;
+    src: url(Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: roberto2;
+    src: url(Roboto-Thin.ttf);
+}
+#container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar{
+
+    width: 150px;
+    height: 100vw;
+    background-color: #845ec2;
+    position : fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 8px 8px 15px rgb(0, 0, 0);
+}
+#musicland{
+
+    position: fixed;
+    left: 14px;
+    top: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    font-family: roberto;
+}
+body{
+
+    background-color: rgb(35, 35, 35);
+}
+#register{
+
+    position: fixed;
+    left: 30px;
+    top: 585px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#login{
+
+    position: fixed;
+    left: 30px;
+    top: 540px;
+    font-family: roberto;
+    font-size: 20px;
+}
+.link{
+
+    color: black;
+    text-decoration: none;
+}
+.link:hover{
+
+    color: white;
+    text-decoration: none;
+}
+#dashboard{
+
+    position: fixed;
+    left: 30px;
+    top: 170px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#playlist{
+
+    position: fixed;
+    left: 30px;
+    top: 250px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#logout{
+
+    position: fixed;
+    left: 30px;
+    top: 560px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#homepage{
+
+    position: fixed;
+    left: 30px;
+    top: 90px;
+    font-family: roberto;
+    font-size: 20px;
+}

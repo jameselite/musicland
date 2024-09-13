@@ -1,0 +1,79 @@
+@font-face {
+    font-family: roberto;
+    src: url(Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: roberto2;
+    src: url(Roboto-Thin.ttf);
+}
+#dashboard2{
+
+    position: fixed;
+    left: 30px;
+    top: 250px;
+    font-family: roberto;
+    color: black;
+    font-size: 20px;
+}
+#dashboard2:hover{
+
+    color: white;
+}
+#uploadlink{
+
+    position: fixed;
+    left: 30px;
+    top: 170px;
+    font-family: roberto;
+    color: black;
+    font-size: 20px;
+
+}
+#uploadlink:hover{
+
+    color: white;
+
+}
+#yourplaylist{
+
+    position: absolute;
+    left: 40%;
+    top: 3%;
+    color: chartreuse;
+    font-family: roberto;
+}
+#songs{
+
+    position: relative;
+    margin-left: 340px;
+    margin-top: 0px;
+    top: 150px;
+    color: white;
+    font-family: roberto2;
+    font-size: 20px;
+}
+#songsimage{
+
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-left: 200px;
+    margin-top:  0px;
+    top: 105px;
+}
+#authortrack{
+    position: absolute;
+    margin-top: 70px;
+    left: 25%;
+    font-family: roberto2;
+    color: chartreuse;
+    font-size: 20px;
+}
+#nosong{
+
+    position: absolute;
+    left: 33%;
+    top: 30%;
+    color: white;
+    font-family: roberto2;
+}

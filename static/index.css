@@ -1,0 +1,236 @@
+@font-face {
+    font-family: roberto;
+    src: url(Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: roberto2;
+    src: url(Roboto-Thin.ttf);
+}
+#container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar{
+
+    width: 150px;
+    height: 100vw;
+    background-color: #845ec2;
+    position : fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 8px 8px 15px rgb(0, 0, 0);
+}
+#musicland{
+
+    position: fixed;
+    left: 14px;
+    top: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    font-family: roberto;
+}
+body{
+
+    background-color: rgb(35, 35, 35);
+}
+#usericon{
+
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    left: 35px;
+    top: 70px;
+}
+#welcome{
+
+    position: fixed;
+    left: 20px;
+    top: 490px;
+    color: black;
+    font-family: roberto;
+    font-size: 20px;
+
+}
+#register{
+
+    position: fixed;
+    left: 30px;
+    top: 585px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#login{
+
+    position: fixed;
+    left: 30px;
+    top: 540px;
+    font-family: roberto;
+    font-size: 20px;
+}
+.link{
+
+    color: black;
+    text-decoration: none;
+}
+.link:hover{
+
+    color: white;
+    text-decoration: none;
+}
+#upload{
+
+    position: fixed;
+    left: 30px;
+    top: 90px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#dashboard{
+
+    position: fixed;
+    left: 30px;
+    top: 170px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#playlist{
+
+    position: fixed;
+    left: 30px;
+    top: 250px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#popular{
+
+    position: fixed;
+    left: 30px;
+    top: 330px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#logout{
+
+    position: fixed;
+    left: 30px;
+    top: 560px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#container2{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    direction: rtl;
+    position: relative;
+    top: 300px;
+    width: 900px;
+    left: 190px;
+    flex-direction: row;
+}
+#title{
+
+    font-family: roberto2;
+    font-size: 17px;
+    color: aliceblue;
+    position: relative;
+    left: 157px;
+    top: 100px;
+    direction: ltr;
+    width: 150px;
+}
+#image{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgb(15, 15, 15);
+}
+#track{
+
+    margin-left: 100px;
+    margin-top: 20px;
+}
+#search{
+
+    position: absolute;
+    left: 35%;
+    top: 2%;
+    width: 400px;
+    height: 23px;
+    border-radius: 10px;
+    border: none;
+    font-family: roberto;
+    font-size: 16px;
+    text-align: center;
+}
+#searchbtn{
+
+    position: absolute;
+    left: 66%;
+    top: 1.7%;
+    border-radius: 7px;
+    height: 27px;
+    width: 70px;
+    border: none;
+}
+#headerimg{
+
+    position: absolute;
+    width: 550px;
+    height: 300px;
+    background-color: white;
+    top: 9%;
+    left: 24%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(15, 15, 15);
+    object-fit:unset;
+}
+#headerimg2{
+
+    position: absolute;
+    width: 250px;
+    height: 207px;
+    background-color: white;
+    top: 9%;
+    left: 67%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(15, 15, 15);
+    object-fit:unset;
+}
+#headerimg3{
+
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    background-color: white;
+    top: 44%;
+    left: 67%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(15, 15, 15);
+    object-fit:unset;
+}
+#created{
+
+    position: absolute;
+    left: 70%;
+    top: 8%;
+    font-family: roberto;
+    font-size:  20px;
+    width: 200px;
+    line-height: 50px;
+
+}
+#headertext1{
+
+    position: absolute;
+    left: 68%;
+    top: 45%;
+    font-size: 25px;
+    font-family: roberto;
+
+}

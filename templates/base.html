@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Music Land{% endblock title %}</title>
+    {% load static %}
+    {% block style %}
+    
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% endblock style %}
+</head>
+<body>
+
+    <div id="container1">
+        <div id="navbar"></div>
+        <h1 id="musicland">Music Land</h1>
+       {% block links%}
+       {% if request.user.is_authenticated %}
+       <a href="{% url 'uploadtrack' %}" class="link"><h2 id="upload">Upload</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       <a href="{% url 'accounts:logout' %}" class="link"><h2 id="logout">logout</h2></a>
+       {% else %}
+       <a href="{% url 'accounts:login' %}" class="link"><h2 id="login">Login</h2></a>
+       <a href="{% url 'accounts:register' %}" class="link"><h2 id="register">Register</h2></a>
+       <a href="{% url 'uploadtrack' %}" class="link"><h2 id="upload">Upload</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       {% endif %}
+       {% endblock links %}
+       
+    </div>
+    {% block content %}
+
+    {% endblock content %}
+    
+</body>
+</html>

@@ -1,0 +1,228 @@
+#uploadlink{
+
+    position: fixed;
+    left: 30px;
+    top: 330px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#tracktitle{
+
+    position: absolute;
+    top:8%;
+    left: 40%;
+    font-family: roberto;
+    color: white;
+}
+#trackimg{
+
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 18.5%;
+    top: 10%;
+    border-radius: 50px;
+}
+#author{
+
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    color: white;
+    font-family: roberto2;
+    font-size: 17px;
+
+}
+#description{
+
+    position: absolute;
+    width: 900px;
+    font-family: roberto2;
+    font-size: 17px;
+    left: 280px;
+    top: 340px;
+    color: white;
+}
+#audio{
+
+    position: absolute;
+    left: 40%;
+    top: 30%;
+}
+#addtoplaylist{
+
+    position: absolute;
+    left: 65%;
+    top: 20.9%;
+    width: 100px;
+    height: 50px;
+    background-color: #845ec2;
+    border: none;
+    border-radius: 15px;
+    font-family: roberto;
+    font-size: 14px;
+}
+#remove_from_playlist{
+
+    position: absolute;
+    left: 65%;
+    top: 40.9%;
+    width: 100px;
+    height: 50px;
+    background-color: #845ec2;
+    border: none;
+    border-radius: 15px;
+    font-family: roberto;
+    font-size: 14px;
+}
+#like{
+
+    position: absolute;
+    left: 75%;
+    top: 21%;
+    background-image: url(like.png);
+    background-size:contain;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+#likeamount{
+
+    position: absolute;
+    left: 80%;
+    top: 21%;
+    color: white;
+    font-family: roberto;
+}
+#delete{
+
+    position: absolute;
+    left: 65%;
+    top: 31%;
+    width: 100px;
+    height: 50px;
+    background-color: #c41e1e;
+    border: none;
+    border-radius: 15px;
+    font-family: roberto;
+    font-size: 20px;
+
+}
+#edit{
+
+    position: absolute;
+    left: 75%;
+    top: 31%;
+    width: 100px;
+    height: 50px;
+    background-color: #0037ff;
+    border: none;
+    border-radius: 15px;
+    font-family: roberto;
+    font-size: 20px;
+}
+#createdat{
+
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font-family: roberto2;
+    color: white;
+}
+#comments{
+
+    position: absolute;
+    color: white;
+    font-family: roberto;
+    left: 20%;
+    top: 75%;
+}
+.commentform{
+
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: roberto;
+    font-size: 20px;
+    width: 300px;
+    height: 200px;
+}
+#commentlabelform{
+
+    position: absolute;
+    color: white;
+    font-family: roberto2;
+    left: 20%;
+    top: 89%;
+    font-size: 25px;
+}
+#commentbutton{
+
+    position: absolute;
+    color: white;
+    background-color: #845ec2;
+    font-family: roberto;
+    left: 29%;
+    top: 135%;
+    font-size: 18px;
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+#nocomments{
+
+    position: absolute;
+    left: 60%;
+    top: 100%;
+    font-family: roberto;
+    color: white;
+}
+#commentauthor{
+
+    position: relative;
+    left: 90%;
+    font-family: roberto;
+    color: white;
+    font-size: 25px;
+    margin-top: 200px;
+    top: 350px;
+}
+#commenttext{
+
+    position: relative;
+    left: 55%;
+    font-family: roberto2;
+    color: white;
+    width: 500px;
+    top: 500px;
+    margin-top: 150px;
+}
+#commenttime{
+
+    position: relative;
+    left: 18%;
+    font-family: roberto;
+    color: white;
+    top: 450px;
+}
+#hr{
+
+    position: relative;
+    left: 5%;
+    font-family: roberto2;
+    color: white;
+    width: 500px;
+    top: 700px;
+    margin-top: 10px;
+}
+#commentobject{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

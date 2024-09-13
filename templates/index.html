@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Land</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+
+    <div id="container1">
+        <div id="navbar"></div>
+        <h1 id="musicland">Music Land</h1>
+       {% if request.user.is_authenticated %}
+       <a href="{% url 'uploadtrack' %}" class="link"><h2 id="upload">Upload</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+       <a href="{% url 'accounts:logout' %}" class="link"><h2 id="logout">logout</h2></a>
+       {% else %}
+       <a href="{% url 'accounts:login' %}" class="link"><h2 id="login">Login</h2></a>
+       <a href="{% url 'accounts:register' %}" class="link"><h2 id="register">Register</h2></a>
+       <a href="{% url 'uploadtrack' %}" class="link"><h2 id="upload">Upload</h2></a>
+       <a href="{% url 'dashboard' %}" class="link"><h2 id="dashboard">Dashboard</h2></a>
+       <a href="{% url 'playlist' %}" class="link"><h2 id="playlist">Playlist</h2></a>
+
+       {% endif %}
+    </div>
+    <div id="container2">
+        {% for item in thetrack %}
+        <div id="track">
+            <a href="{% url 'track_detail' pk=item.pk %}" class="link"><h1 id="title">{{ item.title }}</h1></a>
+            <img src="{{ item.image.url }}" id="image">
+        </div>
+        {% endfor %}
+    </div>
+
+    <form method="post" action="{% url 'search_result' %}">
+        {% csrf_token %}
+        <input placeholder="search..." type="search" name="searched" id="search">
+        <button type="submit" id="searchbtn">Search</button>
+    </form>
+    <img id="headerimg" src="{% static 'headerimg.png' %}">
+    <div id="headerimg2"></div>
+    <div id="headerimg3"></div>
+    <h1 id="headertext1">Python, HTML, CSS</h1>
+    <h1 id="created">Created By SoroushGH with Django Framework In Only 1 Week</h1>
+</body>
+</html>
