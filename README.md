@@ -6,7 +6,7 @@ im not good with CSS.
 
 <h1> musicland website have these features:
 </h1>
-<h2> You can upload, edit , listen , delete and add tracks to your playlist</h2>
+ You can upload, edit , listen , delete and add tracks to your playlist
 <strong>user authentication:</strong>
 
 you can register in it with username and password and you can login.
@@ -18,5 +18,7 @@ only author of tracks can change them.
 <strong>Playlist :</strong>
 
 every user have a Playlist that can add tracks to them or remove the tracks.
+
+![Untitled](https://github.com/user-attachments/assets/caf627b1-1ce0-4bfd-adb4-29fe3577d3f1)
 
 there are still hundreds of feature that i can add to it and improve the UI but because lack of time , i can't do it now :(
