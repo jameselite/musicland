@@ -1,4 +1,4 @@
-<h1>MusicLand : An music sharing website </h1>
+<h1>MusicLand : A music sharing website </h1>
 <h3>musicland created with django framework in 7 day as my first django project.</h3>
 
 it doesn't have any front end framework and sorry about UI ! 
